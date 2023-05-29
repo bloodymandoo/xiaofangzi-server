@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: xiaofangzi-server
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://:/?characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CTT&nullCatalogMeansCurrent=true&allowMultiQueries=true
+    username: username
+    password: password
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+swagger:
+  package: com.xiao.fang.zi.xiaofangziserver
+  production: false
+  basic:
+    enable: true
+    username: username
+    password: password
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

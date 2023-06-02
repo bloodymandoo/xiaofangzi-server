@@ -42,7 +42,7 @@ public class ArticleController extends BaseController {
 
     @ApiOperation(value = "新增", notes = "新增")
     @PostMapping("/save")
-    public CommonResult<Boolean> save( @RequestBody ArticleDto articleDto){
+    public CommonResult<Boolean> save(@RequestBody ArticleDto articleDto){
         return CommonResult.success(articleService.saveArticle(articleDto));
     }
 
